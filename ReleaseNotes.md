@@ -75,7 +75,7 @@ The known issues are grouped as follows.
 
 *   **[FTBFS] Fix building ContainerInfo plugin for a 32-bit Linux release**
 
-    Reported in [open-vm-tools pull request #588](https://github.com/vmware/open-vm-tools/pull/588), the fix did not make the code freeze date.   The fix is available in the open-vm-tools "devel" branch at [commit 605c30a](https://github.com/vmware/open-vm-tools/commit/605c30a33f6dedc07ded8e24ce1491fba162ce82) and can be applied directly to the 12.0.0 open-vm-tools sources.
+    Reported in [open-vm-tools pull request #588](https://github.com/vmware/open-vm-tools/pull/588), the fix did not make the code freeze date.   The fix is available in the open-vm-tools "devel" branch at [commit 605c30a](https://github.com/vmware/open-vm-tools/commit/605c30a33f6dedc07ded8e24ce1491fba162ce82) and can be applied directly to the 12.0.0 and 12.0.5 open-vm-tools sources.
 
     The fix will be in the next open-vm-tools source release.
 
