@@ -64,6 +64,11 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_g
 
     This issue is fixed in this release.
 
+*   **A complete list of the granular changes that are in the open-vm-tools 12.0.5 release is available at:**
+
+    [Open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.0.5/open-vm-tools/ChangeLog)
+
+
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
 The known issues are grouped as follows.
