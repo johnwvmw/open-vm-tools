@@ -20,9 +20,11 @@ The release notes cover the following topics:
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
-*   TBD
+*   There are no new features or significant changes in the open-vm-tools 12.0.0 release.  This is primarily a maintenance release.
 
-## <a id="i18n" name="i18n"><\a>Internationalization
+*   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
+
+## <a id="i18n" name="i18n"></a>Internationalization
 
 Open-vm-tools 12.0.5 is available in the following languages:
 
