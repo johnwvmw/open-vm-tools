@@ -54,7 +54,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_g
 
 *   **[FTBFS] glibc 2.35 and GCC 11 & 12 reporting possible array bounds overflow - bora/lib/asyncsocket/asyncksocket.c: AsyncTCPSocketPollWork()**
 
-    Reported in [open-vm-tools issue #570](https://github.com/vmware/open-vm-tools/issues/570), the fix was not available in time for the open-vm-tools 12.0.0 to meet the code freeze date.  At that time the fix was made available in the open-vm-tools "devel" branch.
+    Reported in [open-vm-tools issue #570](https://github.com/vmware/open-vm-tools/issues/570), the fix was not available at the time of the open-vm-tools 12.0.0 code freeze date.  The fix was made available in the open-vm-tools "devel" branch.
 
     This issue is fixed in this release.
 
@@ -64,7 +64,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_g
 
     This issue is fixed in this release.
 
-*   **A complete list of the granular changes that are in the open-vm-tools 12.0.5 release is available at:**
+*   **A complete list of the granular changes in the open-vm-tools 12.0.5 release is available at:**
 
     [Open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.0.5/open-vm-tools/ChangeLog)
 
@@ -78,7 +78,7 @@ The known issues are grouped as follows.
 
 **<a id="open-vm-tools-issues-known" name="open-vm-tools-issues-known"></a>Open-vm-tools Issues**
 
-*   **[FTBFS] Fix building ContainerInfo plugin for a 32-bit Linux release**
+*   **[FTBFS] Fix the build of the ContainerInfo plugin for a 32-bit Linux release**
 
     Reported in [open-vm-tools pull request #588](https://github.com/vmware/open-vm-tools/pull/588), the fix did not make the code freeze date.   The fix is available in the open-vm-tools "devel" branch at [commit 605c30a](https://github.com/vmware/open-vm-tools/commit/605c30a33f6dedc07ded8e24ce1491fba162ce82) and can be applied directly to the 12.0.0 and 12.0.5 open-vm-tools sources.
 
