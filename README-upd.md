@@ -1,5 +1,5 @@
 
-## My version of Linux is not recognized.  How do I add my Linux name to the known list?##
+## My version of Linux is not recognized.  How do I add my Linux name to the known list?
 
 The open-vm-tools source contains a table mapping the guest distro name to the officially recognized short name.  __Please do not submit pull requests altering this table and associated code.__  Any changes here must be accompanied by additional changes in the VMware host.  Values that are not recognized by the VMware host will be ignored. 
 
