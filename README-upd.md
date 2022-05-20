@@ -7,7 +7,7 @@ If you are interested in extending this table, do not send a pull request.  Inst
 
 Use the appropriate generic Linux designation when configuring a VM for your Linux version.  The selection available will vary by virtual hardware version being used.
 - Other 5.x or later Linux (64-bit)
-- Other 5.x or later Linux (64-bit)
+- Other 5.x or later Linux (32-bit)
 - Other 4.x Linux (64-bit)
 - Other 4.x Linux (32-bit)
 - Other 3.x Linux (64-bit)
