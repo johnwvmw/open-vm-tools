@@ -52,7 +52,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 ## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
 
-*   A number of Coverity and Codacy reported issues have been addressed.
+*   A number of Coverity reported issues have been addressed.
 
 *   **[FTBFS] Fix the build of the ContainerInfo plugin for a 32-bit Linux release**
 
@@ -62,7 +62,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **Make HgfsConvertFromNtTimeNsec aware of 64-bit time_t on i386 (32-bit)**
 
-    Reported in [open-vm-tools pull request #387[(https://github.com/vmware/open-vm-tools/pull/387), this change incorporates the support of 64 bit time epoch conversion from Windows NT time to Unix Epoch time on i386.
+    Reported in [open-vm-tools pull request #387](https://github.com/vmware/open-vm-tools/pull/387), this change incorporates the support of 64 bit time epoch conversion from Windows NT time to Unix Epoch time on i386.
 
 *   **A complete list of the granular changes in the open-vm-tools 12.1.0 release is available at:**
 
