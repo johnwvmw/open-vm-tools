@@ -16,7 +16,7 @@ The release notes cover the following topics:
 * [Guest Operating System Customization Support](#guestop) 
 * [Interoperability Matrix](#interop) 
 * [Resolved Issues](#resolvedissues) 
-* [Known Issues](#kno#resolvedissueswnissues)
+* [Known Issues](#knownissues)
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
@@ -50,27 +50,27 @@ The [Guest OS Customization Support Matrix](http://partnerweb.vmware.com/progra
 
 The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_guide2/sim/interop_matrix.php) provides details about the compatibility of current and earlier versions of VMware Products. 
 
+## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
+
+*   A number of Coverity and Codacy reported issues have been addressed.
+
 *   **[FTBFS] Fix the build of the ContainerInfo plugin for a 32-bit Linux release**
 
     Reported in [open-vm-tools pull request #588](https://github.com/vmware/open-vm-tools/pull/588), the fix did not make the code freeze date for open-vm-tools 12.0.5.
 
     This issue is fixed in this release.
 
+*   **Make HgfsConvertFromNtTimeNsec aware of 64-bit time_t on i386 (32-bit)**
 
-## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
-
-*   A number of Coverity and Codacy reported issues have been addressed.
-
-*   **The following issues and pull requests reported on [github.com/vmware/open-vm-tools](https://github.com/vmware/open-vm-tools)  have been addressed:**
-
-    -   [Issue # 588](https://github.com/vmware/open-vm-tools/issues/588)
-    -   [Pull  # 387](https://github.com/vmware/open-vm-tools/pull/387)
+    Reported in [open-vm-tools pull request #387[(https://github.com/vmware/open-vm-tools/pull/387), this change incorporates the support of 64 bit time epoch conversion from Windows NT time to Unix Epoch time on i386.
 
 *   **A complete list of the granular changes in the open-vm-tools 12.1.0 release is available at:**
 
     [Open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.1.0/open-vm-tools/ChangeLog)
 
-## Known Issues The known issues are grouped as follows.
+## <a id="knownissues" name="knownissues"></a>Known Issues
+
+The Known Issues The known issues are grouped as follows.
 
 *   [Open-vm-tools Issues](#open-vm-tools-issues-known)
 *   [Open-vm-tools Issues in VMware Workstation or Fusion](#open-vm-tools-issues-in-vmware-workstation-or-fusion-known)
