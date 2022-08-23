@@ -70,18 +70,12 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
-The Known Issues The known issues are grouped as follows.
-
-*   [Open-vm-tools Issues](#open-vm-tools-issues-known)
-*   [Open-vm-tools Issues in VMware Workstation or Fusion](#open-vm-tools-issues-in-vmware-workstation-or-fusion-known)
-
-**<a id="open-vm-tools-issues-known" name="open-vm-tools-issues-known"></a>Open-vm-tools Issues**
-
-**<a id="open-vm-tools-issues-in-vmware-workstation-or-fusion-known" name="open-vm-tools-issues-in-vmware-workstation-or-fusion-known"></a>Open-vm-tools Issues in VMware Workstation or Fusion**
 
 *   **Shared Folders mount is unavailable on Linux VM.**
 
     If the **Shared Folders** feature is enabled on a Linux VM while it is powered off, the shared folders mount is not available on restart.
+
+    Note: This issue is applicable to VMware Tools running on VMware Workstation and VMware Fusion.
 
     Workaround:
 
