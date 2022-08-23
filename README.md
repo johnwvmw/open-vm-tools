@@ -14,13 +14,13 @@ Releases 12.0.5, 12.0.0, 11.3.5, 11.3.0
 
  
 
-*   [**1125-Properly-check-authorization-on-incoming-guestOps-re.patch **](https://github.com/vmware/open-vm-tools/blob/CVE-2022-31676.patch/1125-Properly-check-authorization-on-incoming-guestOps-re.patch)
+*   **[1125-Properly-check-authorization-on-incoming-guestOps-re.patch](https://github.com/vmware/open-vm-tools/blob/CVE-2022-31676.patch/1125-Properly-check-authorization-on-incoming-guestOps-re.patch)**
 
 Releases 11.2.5, 11.2.0, 11.1.5, 11.1.0, 11.0.5, 11.0.1, 11.0.0 
 
  
 
-*   [**10310-Properly-check-authorization-on-incoming-guestOps-r.patch ](https://github.com/vmware/open-vm-tools/blob/CVE-2022-31676.patch/10310-Properly-check-authorization-on-incoming-guestOps-r.patch)
+*   **[10310-Properly-check-authorization-on-incoming-guestOps-r.patch](https://github.com/vmware/open-vm-tools/blob/CVE-2022-31676.patch/10310-Properly-check-authorization-on-incoming-guestOps-r.patch)**
 
 Releases 10.3.10, 10.3.5, 10.3.0 
 
