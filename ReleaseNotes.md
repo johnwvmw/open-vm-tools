@@ -75,7 +75,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     If the **Shared Folders** feature is enabled on a Linux VM while it is powered off, the shared folders mount is not available on restart.
 
-    Note: This issue is applicable to VMware Tools running on VMware Workstation and VMware Fusion.
+    Note: This issue is applicable to open-vm-tools running on VMware Workstation and VMware Fusion.
 
     Workaround:
 
