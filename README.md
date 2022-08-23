@@ -8,7 +8,7 @@ The following patches provided to the open-vm-tools community can be used to app
 
 
 
-*  [**1205-Properly-check-authorization-on-incoming-guestOps-re.patch **](https://github.com/vmware/open-vm-tools/blob/CVE-2022-31676.patch/1205-Properly-check-authorization-on-incoming-guestOps-re.patch)
+*   **[1205-Properly-check-authorization-on-incoming-guestOps-re.patch](https://github.com/vmware/open-vm-tools/blob/CVE-2022-31676.patch/1205-Properly-check-authorization-on-incoming-guestOps-re.patch)**
 
 Releases 12.0.5, 12.0.0, 11.3.5, 11.3.0 
 
