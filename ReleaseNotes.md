@@ -20,7 +20,7 @@ The release notes cover the following topics:
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
-*  Guest customization (deployPkg plugin) has been modified to allow Perl base Linux customization to better work in concert with cloud-init when updating user data and configuring the network.
+*  Guest customization (deployPkg plugin) has been modified to allow Perl based Linux customization to better work in concert with cloud-init when updating user data and configuring the network.
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
@@ -54,7 +54,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **A number of Coverity reported issues have been addressed.**
 
-*   **The deployPkg plugin may prematurely reboot the guest VM before cloud-inithas completed user data setup.**
+*   **The deployPkg plugin may prematurely reboot the guest VM before cloud-init has completed user data setup.**
 
     If both the Perl based Linux customization script and cloud-init run when the guest VM boots, the Perl script may disable the network or reboot the guest before cloud-init has finished.  The deployPkg plugin has been updated to wait for a running cloud-init process to finish before the guest VM reboot is initiated.
 
