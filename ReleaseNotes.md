@@ -2,7 +2,7 @@
 
 Updated on: 29th NOV 2022
 
-Open-vm-tools | 29th NOV 2022 | Build BLD-nnnnnn
+Open-vm-tools | 29th NOV 2022 | Build 20735119
 
 Check back for additions and updates to these release notes.
 
@@ -20,7 +20,7 @@ The release notes cover the following topics:
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
-*  Guest customization (deployPkg plugin) has been modified to allow Perl base Linux customization better work in concert with cloud-init when updating user data and configuring the network.
+*  Guest customization (deployPkg plugin) has been modified to allow Perl base Linux customization to better work in concert with cloud-init when updating user data and configuring the network.
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
