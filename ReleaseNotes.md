@@ -1,8 +1,8 @@
-#                      Open-vm-tools 12.1.0 Release Notes
+#                      Open-vm-tools 12.1.5 Release Notes
 
-Updated on: 23rd AUG 2022
+Updated on: 29th NOV 2022
 
-Open-vm-tools | 23rd AUG 2022 | Build 20219665
+Open-vm-tools | 29th NOV 2022 | Build BLD-nnnnnn
 
 Check back for additions and updates to these release notes.
 
@@ -20,14 +20,14 @@ The release notes cover the following topics:
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
-* This release resolves CVE-2022-31676. For more information on this vulnerability and its impact on VMware products, see [https://www.vmware.com/security/advisories/VMSA-2022-0024.html](https://www.vmware.com/security/advisories/VMSA-2022-0024.html).
+*  Guest customization (deployPkg plugin) has been modified to allow Perl base Linux customization better work in concert with cloud-init when updating user data and configuring the network.
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
-Open-vm-tools 12.1.0 is available in the following languages:
+Open-vm-tools 12.1.5 is available in the following languages:
 
 * English
 * French
@@ -52,21 +52,27 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 ## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
 
-*   A number of Coverity reported issues have been addressed.
+*   **A number of Coverity reported issues have been addressed.**
 
-*   **[FTBFS] Fix the build of the ContainerInfo plugin for a 32-bit Linux release**
+*   **The deployPkg plugin may prematurely reboot the guest VM before cloud-inithas completed user data setup.**
 
-    Reported in [open-vm-tools pull request #588](https://github.com/vmware/open-vm-tools/pull/588), the fix did not make the code freeze date for open-vm-tools 12.0.5.
+    If both the Perl based Linux customization script and cloud-init run when the guest VM boots, the Perl script may disable the network or reboot the guest before cloud-init has finished.  The deployPkg plugin has been updated to wait for a running cloud-init process to finish before the guest VM reboot is initiated.
 
     This issue is fixed in this release.
 
-*   **Make HgfsConvertFromNtTimeNsec aware of 64-bit time_t on i386 (32-bit)**
+*   **A SIGSEGV may be encountered when a non-quiesing snapshot times out.**
 
-    Reported in [open-vm-tools pull request #387](https://github.com/vmware/open-vm-tools/pull/387), this change incorporates the support of 64 bit time epoch conversion from Windows NT time to Unix Epoch time on i386.
+    This issue is fixed in this release.
 
-*   **A complete list of the granular changes in the open-vm-tools 12.1.0 release is available at:**
+*   **Unwanted vmtoolsd service error message if not on a VMware hypervisor.**
 
-    [Open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.1.0/open-vm-tools/ChangeLog)
+    When open-vm-tools comes preinstalled in a base Linux release, the vmtoolsd services are started automatically at system start and desktop login.  If running on physical hardware or in a non-VMware hypervisor, the services will emit an error message to the systemd's logging service before stopping.
+
+    This issue is fixed in this release.
+
+*   **A complete list of the granular changes in the open-vm-tools 12.1.5 release is available at:**
+
+    [Open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.1.5/open-vm-tools/ChangeLog)
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
@@ -82,7 +88,4 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
     If the VM is powered on, disable and enable the **Shared Folders** feature from the interface. For resolving the issue permanently, edit **/etc/fstab** and add an entry to mount the Shared Folders automatically on boot.  For example, add the line:
 
     <tt>vmhgfs-fuse   /mnt/hgfs    fuse    defaults,allow_other    0    0</tt>
-
-
-
 
