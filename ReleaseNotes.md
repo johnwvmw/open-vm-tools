@@ -60,7 +60,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     This issue is fixed in this release.
 
-*   **A SIGSEGV may be encountered when a non-quiesing snapshot times out.**
+*   **A SIGSEGV may be encountered when a non-quiescing snapshot times out.**
 
     This issue is fixed in this release.
 
