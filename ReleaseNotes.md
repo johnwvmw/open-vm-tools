@@ -24,6 +24,9 @@ There are no new features in the open-vm-tools 12.1.5 release.  This is primaril
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
+*   **A complete list of the granular changes in the open-vm-tools 12.1.5 release is available at:**
+
+    [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.1.5/open-vm-tools/ChangeLog)
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
@@ -62,10 +65,6 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
     When open-vm-tools comes preinstalled in a base Linux release, the vmtoolsd services are started automatically at system start and desktop login.  If running on physical hardware or in a non-VMware hypervisor, the services will emit an error message to the Systemd's logging service before stopping.
 
     This issue is fixed in this release.
-
-*   **A complete list of the granular changes in the open-vm-tools 12.1.5 release is available at:**
-
-    [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.1.5/open-vm-tools/ChangeLog)
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
