@@ -49,7 +49,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **The deployPkg plugin may prematurely reboot the guest VM before cloud-init has completed user data setup.**
 
-    If both the Perl based Linux customization script and cloud-init run when the guest VM boots, the Perl script may disable the network or reboot the guest before cloud-init has finished.  The deployPkg plugin has been updated to wait for a running cloud-init process to finish before the guest VM reboot is initiated.
+    If both the Perl based Linux customization script and cloud-init run when the guest VM boots, the deployPkg plugin may reboot the guest before cloud-init has finished.  The deployPkg plugin has been updated to wait for a running cloud-init process to finish before the guest VM reboot is initiated.
 
     This issue is fixed in this release.
 
