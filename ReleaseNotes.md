@@ -20,7 +20,7 @@ The release notes cover the following topics:
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
-*  Guest customization (deployPkg plugin) has been modified to allow Perl based Linux customization to better work in concert with cloud-init when updating user data and configuring the network.
+There are no new features in the open-vm-tools 12.1.5 release.  This is primarily a maintenance release that addresses a few critical problems.
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
@@ -39,13 +39,6 @@ Open-vm-tools 12.1.5 is available in the following languages:
 * Simplified Chinese
 * Traditional Chinese
 
-## <a id="endoffeaturesupport" name="endoffeaturesupport"></a>End of Feature Support Notice
-
- * The tar tools (linux.iso) and OSPs shipped with VMware Tools 10.3.x release will continue to be supported. However, releases after VMware Tools 10.3.5 will only include critical and security fixes. No new feature support will be provided in these types of VMware Tools (tar tools and OSP's). It is recommended that customers use open-vm-tools for those operating systems that support open-vm-tools. For more information about open-vm-tools, see [KB 2073803](https://kb.vmware.com/s/article/2073803).
-
-## <a id="guestop" name="guestop"></a>Guest Operating System Customization Support
-The [Guest OS Customization Support Matrix](http://partnerweb.vmware.com/programs/guestOS/guest-os-customization-matrix.pdf) provides details about the guest operating systems supported for customization.
-
 ## <a id="interop" name="interop"></a>Interoperability Matrix
 
 The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_guide2/sim/interop_matrix.php) provides details about the compatibility of current and earlier versions of VMware Products. 
@@ -60,7 +53,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     This issue is fixed in this release.
 
-*   **A SIGSEGV may be encountered when a non-quiescing snapshot times out.**
+*   **A SIGSEGV may be encountered when a non-quiesing snapshot times out.**
 
     This issue is fixed in this release.
 
