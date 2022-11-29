@@ -1,8 +1,8 @@
-#                      Open-vm-tools 12.1.5 Release Notes
+#                      open-vm-tools 12.1.5 Release Notes
 
 Updated on: 29th NOV 2022
 
-Open-vm-tools | 29th NOV 2022 | Build 20735119
+open-vm-tools | 29th NOV 2022 | Build 20735119
 
 Check back for additions and updates to these release notes.
 
@@ -27,7 +27,7 @@ There are no new features in the open-vm-tools 12.1.5 release.  This is primaril
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
-Open-vm-tools 12.1.5 is available in the following languages:
+open-vm-tools 12.1.5 is available in the following languages:
 
 * English
 * French
