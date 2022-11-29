@@ -24,7 +24,7 @@ There are no new features in the open-vm-tools 12.1.5 release.  This is primaril
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
-*   **A complete list of the granular changes in the open-vm-tools 12.1.5 release is available at:**
+*   A complete list of the granular changes in the open-vm-tools 12.1.5 release is available at:
 
     [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.1.5/open-vm-tools/ChangeLog)
 
