@@ -42,6 +42,10 @@ open-vm-tools 12.2.0 is available in the following languages:
 * Simplified Chinese
 * Traditional Chinese
 
+## <a id="guestop" name="guestop"></a>Guest Operating System Customization Support
+
+The [Guest OS Customization Support Matrix](http://partnerweb.vmware.com/programs/guestOS/guest-os-customization-matrix.pdf) provides details about the guest operating systems supported for customization.
+
 ## <a id="interop" name="interop"></a>Interoperability Matrix
 
 The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_guide2/sim/interop_matrix.php) provides details about the compatibility of current and earlier versions of VMware Products. 
