@@ -50,9 +50,26 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **A number of Coverity reported issues have been addressed.**
 
-*   **The following pullrequests and issues have been addressed.**
+*   **The vmtoolsd task is blocked in the uninterruptible state while doing a quiesed snapshot.**
+
+    As the ioctl FIFREEZE is done during a quiesced snapshot operation, an EBUSY could be seen because of an attempt to freeze the same superblock more than once depending on the OS configuration (e.g. usage of bind mounts).  An EBUSY could also mean another process has locked or frozen that filesystem.  That later could lead to the vmtoolsd process being blocked and ultimately other processes on the system canbe blocked.
+
+    The Linux quiesced snapshot procedure has been updated that when an EBUSY is received, the filesystem FSID is checked against the list of filesystems that have already be quiesced.  If not previously seen, a warning that the filesystem is controlled by another process is logged and the quiesced snapshot request will be rejected.
+
+    This fix to lib/syncDriver/syncDriverLinux.c is directly applicable to previous releases of open-vm-tools and is available at:
+
+        https://github.com/vmware/open-vm-tools/commit/9d458c53a7a656d4d1ba3a28d090cce82ac4af0e
+
+*   **Updated the guestOps to handle some edge cases.**
+
+    When File_GetSize() fails or returns a -1 indicating the user does not have access permissions:
+     1 Skip the file in the output of the ListFiles() request.
+     2 Fail an InitiateFileTransferFromGuest operation.
+
+*   **The following pull requests and issues have been addressed.**
 
     * Detect the proto files for the containerd grpc client in alternate locations.
+
       [Pull request #626](https://github.com/vmware/open-vm-tools/pull/626)
 
     * FreeBSD: Support newer releases and code clean-up for earlier versions.
