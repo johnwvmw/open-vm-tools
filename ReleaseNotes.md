@@ -50,14 +50,14 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **A number of Coverity reported issues have been addressed.**
 
-*   **The following pullrequests and issues have been addressed .
+*   **The following pullrequests and issues have been addressed.**
 
     * Detect the proto files for the containerd grpc client in alternate locations.
       [Pull request #626](https://github.com/vmware/open-vm-tools/pull/626)
 
     * FreeBSD: Support newer releases and code clean-up for earlier versions.
 
-      [Pull request:](https://github.com/vmware/open-vm-tools/pull/584)
+      [Pull request #584](https://github.com/vmware/open-vm-tools/pull/584)
 
 
 
