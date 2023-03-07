@@ -1,8 +1,8 @@
-#                      open-vm-tools 12.1.5 Release Notes
+#                      open-vm-tools 12.2.0 Release Notes
 
-Updated on: 29th NOV 2022
+Updated on: 7 MAR 2023
 
-open-vm-tools | 29th NOV 2022 | Build 20735119
+open-vm-tools | 7 MAR 2023 | Build 21223074
 
 Check back for additions and updates to these release notes.
 
@@ -20,17 +20,17 @@ The release notes cover the following topics:
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
-There are no new features in the open-vm-tools 12.1.5 release.  This is primarily a maintenance release that addresses a few critical problems.
+There are no new features in the open-vm-tools 12.2.0 release.  This is primarily a maintenance release that addresses a few critical problems.
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
-*   A complete list of the granular changes in the open-vm-tools 12.1.5 release is available at:
+*   A complete list of the granular changes in the open-vm-tools 12.2.0 release is available at:
 
-    [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.1.5/open-vm-tools/ChangeLog)
+    [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.2.0/open-vm-tools/ChangeLog)
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
-open-vm-tools 12.1.5 is available in the following languages:
+open-vm-tools 12.2.0 is available in the following languages:
 
 * English
 * French
@@ -50,21 +50,16 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **A number of Coverity reported issues have been addressed.**
 
-*   **The deployPkg plugin may prematurely reboot the guest VM before cloud-init has completed user data setup.**
+*   **The following pullrequests and issues have been addressed .
 
-    If both the Perl based Linux customization script and cloud-init run when the guest VM boots, the deployPkg plugin may reboot the guest before cloud-init has finished.  The deployPkg plugin has been updated to wait for a running cloud-init process to finish before the guest VM reboot is initiated.
+    * Detect the proto files for the containerd grpc client in alternate locations.
+      [Pull request #626](https://github.com/vmware/open-vm-tools/pull/626)
 
-    This issue is fixed in this release.
+    * FreeBSD: Support newer releases and code clean-up for earlier versions.
 
-*   **A SIGSEGV may be encountered when a non-quiesing snapshot times out.**
+      [Pull request:](https://github.com/vmware/open-vm-tools/pull/584)
 
-    This issue is fixed in this release.
 
-*   **Unwanted vmtoolsd service error message if not on a VMware hypervisor.**
-
-    When open-vm-tools comes preinstalled in a base Linux release, the vmtoolsd services are started automatically at system start and desktop login.  If running on physical hardware or in a non-VMware hypervisor, the services will emit an error message to the Systemd's logging service before stopping.
-
-    This issue is fixed in this release.
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
