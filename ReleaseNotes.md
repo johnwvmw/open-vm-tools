@@ -63,8 +63,8 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 *   **Updated the guestOps to handle some edge cases.**
 
     When File_GetSize() fails or returns a -1 indicating the user does not have access permissions:
-     1 Skip the file in the output of the ListFiles() request.
-     2 Fail an InitiateFileTransferFromGuest operation.
+     1. Skip the file in the output of the ListFiles() request.
+     2. Fail an InitiateFileTransferFromGuest operation.
 
 *   **The following pull requests and issues have been addressed.**
 
