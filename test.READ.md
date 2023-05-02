@@ -2,7 +2,7 @@
 
 A security issue in VMware Tools and open-vm-tools has been announced by VMware in a security advisory [VMSA-2023-XXXX](https://www.vmware.com/security/advisories/VMSA-2023-XXXX.html).
 
-The issue has been fixed in the open-vm-tools release 12.2.5 to be releases to be released  later in the month of May 2023.
+The issue has been fixed in the open-vm-tools release 12.2.5 to be released later in the month of May 2023.
 
 The following patch provided to the open-vm-tools community can be used to apply the security fix to previous open-vm-tools releases.
 
