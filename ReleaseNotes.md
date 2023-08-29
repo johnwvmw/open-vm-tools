@@ -30,7 +30,7 @@ TBD
 
     [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.3.0/open-vm-tools/ChangeLog)
 
-##<a id="endsupport" name="endsupport".</a>End of Feature Support Notice
+##<a id="endsupport" name="endsupport"</a>End of Feature Support Notice
 
 *   Deprecated: Using "xml-security-c" and "xerces-c" to build the VMware Guest Authentication Service (VGAuth)
 
