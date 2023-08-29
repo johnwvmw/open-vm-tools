@@ -32,7 +32,7 @@ This release resolves CVE-2023-20900. For more information on this vulnerability
 
 *   Deprecated: Using "xml-security-c" and "xerces-c" to build the VMware Guest Authentication Service (VGAuth)
 
-    Starting with open-vm-tools 12.4.0 onward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source x projects to build open-m-tools, now is the time to plan for the change.  The open-vm-tools 12.3.x series will be the last version that can use "xml-security-c" and "xerces-c".
+    Starting with open-vm-tools 12.4.0 onward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source projects to build open-m-tools, now is the time to plan for the change.  The open-vm-tools 12.3.x series will be the last version that can use "xml-security-c" and "xerces-c".
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
@@ -68,11 +68,11 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     It is possible that filesystems are being frozen in custom pre-freeze scripts to control the order in which those specific filesystems are to be frozen.  The vmtoolsd process **must be informed** of all such filesystems with the help of "excludedFileSystems" setting of tools.conf.
 
-    <tt>[vmbackup]</tt><br/>
-    <tt>  </tt><br/>
-    <tt>excludedFileSystems=/opt/data,/opt/app/project-*,...</tt>
+    <tt>[vmbackup]<br/>
+    <br/>
+    excludedFileSystems=/opt/data,/opt/app/project-*,...</tt>
 
-    A temporary workaround is available (starting from open-vm-tools 12.3.0) for admins to allow a quiescing operation to succeed until the "excludedFileSystems" list is configured.  If another process thaws the file system while a quiescing operation is ongoing, the snapshot may be compromised.  Once the "excludedFileSystems" list is configured this setting MUST be unset (or set to false).
+    A temporary workaround is available (starting from open-vm-tools 12.3.0) for system administrators to quickly allow a quiescing operation to succeed until the "excludedFileSystems" list can be configured.  Note, if another process thaws the file system while a quiescing snapshot operation is ongoing, the snapshot may be compromised.  Once the "excludedFileSystems" list is configured this setting MUST be unset (or set to false).
 
     <tt>[vmbackup]</tt><br/>
     <tt>  </tt><br/>
