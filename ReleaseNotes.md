@@ -30,7 +30,7 @@ TBD
 
     [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.3.0/open-vm-tools/ChangeLog)
 
-## <a id="endsupport" name="endsupporta>"</a>End of Feature Support Notice
+## <a id="endsupport" name="endsupport>"</a>End of Feature Support Notice
 
 *   Deprecated: Using "xml-security-c" and "xerces-c" to build the VMware Guest Authentication Service (VGAuth)
 
@@ -60,17 +60,17 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 ## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
 
-*   **This release resolves CVE-2023-20900.
+*   **This release resolves CVE-2023-20900.**
 
     For more information on this vulnerability and its impact on VMware products, see https://www.vmware.com/security/advisories/VMSA-2023-0019.html.
 
-*   **A number of Coverity reported issues have been addressed.
+*   **A number of Coverity reported issues have been addressed.**
 
-*   **Component Manager / salt-minion: New InstallStatus "UNMANAGED".
+*   **Component Manager / salt-minion: New InstallStatus "UNMANAGED".**
 
     Salt-minion added support for "ExternalInstall" (106) to indicate an older version of salt-minion is installed on the vm and cannot be managed by the svtminion.* scripts.  The Component Manager will track that is "UNMANAGED" and take no action.
 
-*   **The following pull requests and issues have been addressed
+*   **The following pull requests and issues have been addressed**
 
     * Exclude popular CNI interface in GUESTINFO_DEFAULT_IFACE_EXCLUDES
 
