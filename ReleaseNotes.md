@@ -64,6 +64,28 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     For more information on this vulnerability and its impact on VMware products, see https://www.vmware.com/security/advisories/VMSA-2023-0019.html.
 
+*   **Linux quiesced snapshot: "SyncDriver: failed to freeze '_filesystem_'"
+
+    The open-vm-tools 12.2.0 release had an update to the Linux quiesced snapshot operation that would avoid starting a quiesced snapshot if a filesystem had already been frozen by another process.  See the [Resolved Issues](https://github.com/vmware/open-vm-tools/blob/stable-12.2.0/ReleaseNotes.md#-resolved-issues).   That fix may have been backported into earlier version of open-vm-tools by Linux vendors.  
+
+    It is possible that filesystems are being frozen in custom pre-freeze scripts to control the order in which those specific filesystems are to be frozen.  The vmtoolsd process **must be informed** of all such filesystems with the help of "excludedFileSystems" setting of tools.conf.
+
+    <tt>[vmbackup]</tt>
+    <tt>  </tt>
+    <tt>excludedFileSystems=/opt/data,/opt/app/project-*,...</tt>
+
+    A temporary workaround is available (starting from open-vm-tools 12.3.0) for admins to allow a quiescing operation to succeed until the "excludedFileSystems" list is configured.  If another process thaws the file system while a quiescing operation is ongoing, the snapshot may be compromised.  Once the "excludedFileSystems" list is configured this setting MUST be unset (or set to false).
+
+    <tt>[vmbackup]</tt>
+    <tt>  </tt>
+    <tt>ignoreFrozenFileSystems = true</tt>
+
+    This workaround is provided in the source file changes in 
+
+        https://github.com/vmware/open-vm-tools/commit/60c3a80ddc2b400366ed05169e16a6bed6501da2
+
+    and at the Linux vendor's discretion, may be backported to earlier versions of open-vm-tools.
+
 *   **A number of Coverity reported issues have been addressed.**
 
 *   **Component Manager / salt-minion: New InstallStatus "UNMANAGED".**
@@ -79,6 +101,10 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
     * Add antrea and calico interface pattern to GUESTINFO_DEFAULT_IFACE_EXCLUDES
 
       [Pull request #639](https://github.com/vmware/open-vm-tools/pull/639)
+
+    * Invalid argument with "\" in Linux username (Active Directory user)
+
+      [Issue #641](https://github.com/vmware/open-vm-tools/issues/641)
 
     * Improve POSIX guest identification
 
