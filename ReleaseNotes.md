@@ -22,8 +22,6 @@ The release notes cover the following topics:
 
 This release resolves CVE-2023-20900. For more information on this vulnerability and its impact on VMware products, see https://www.vmware.com/security/advisories/VMSA-2023-0019.html.
 
-TBD
-
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
 *   A complete list of the granular changes in the open-vm-tools 12.3.0 release is available at:
@@ -34,7 +32,7 @@ TBD
 
 *   Deprecated: Using "xml-security-c" and "xerces-c" to build the VMware Guest Authentication Service (VGAuth)
 
-    Starting with open-vm-tools 12.4.0 onward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source x projects to build open-m-tools, now is the time to plan for the change.
+    Starting with open-vm-tools 12.4.0 onward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source x projects to build open-m-tools, now is the time to plan for the change.  The open-vm-tools 12.3.x series will be the last version that can use "xml-security-c" and "xerces-c".
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
@@ -64,20 +62,20 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     For more information on this vulnerability and its impact on VMware products, see https://www.vmware.com/security/advisories/VMSA-2023-0019.html.
 
-*   **Linux quiesced snapshot: "SyncDriver: failed to freeze '_filesystem_'"
+*   **Linux quiesced snapshot: "SyncDriver: failed to freeze '_filesystem_'"**
 
-    The open-vm-tools 12.2.0 release had an update to the Linux quiesced snapshot operation that would avoid starting a quiesced snapshot if a filesystem had already been frozen by another process.  See the [Resolved Issues](https://github.com/vmware/open-vm-tools/blob/stable-12.2.0/ReleaseNotes.md#-resolved-issues).   That fix may have been backported into earlier version of open-vm-tools by Linux vendors.  
+    The open-vm-tools 12.2.0 release had an update to the Linux quiesced snapshot operation that would avoid starting a quiesced snapshot if a filesystem had already been frozen by another process.  See the [Resolved Issues](https://github.com/vmware/open-vm-tools/blob/stable-12.2.0/ReleaseNotes.md#-resolved-issues) section in the open-vm-tools 12.2.0 Release Notes.   That fix may have been backported into earlier versions of open-vm-tools by Linux vendors.  
 
     It is possible that filesystems are being frozen in custom pre-freeze scripts to control the order in which those specific filesystems are to be frozen.  The vmtoolsd process **must be informed** of all such filesystems with the help of "excludedFileSystems" setting of tools.conf.
 
-    <tt>[vmbackup]</tt>
-    <tt>  </tt>
+    <tt>[vmbackup]</tt><br/>
+    <tt>  </tt><br/>
     <tt>excludedFileSystems=/opt/data,/opt/app/project-*,...</tt>
 
     A temporary workaround is available (starting from open-vm-tools 12.3.0) for admins to allow a quiescing operation to succeed until the "excludedFileSystems" list is configured.  If another process thaws the file system while a quiescing operation is ongoing, the snapshot may be compromised.  Once the "excludedFileSystems" list is configured this setting MUST be unset (or set to false).
 
-    <tt>[vmbackup]</tt>
-    <tt>  </tt>
+    <tt>[vmbackup]</tt><br/>
+    <tt>  </tt><br/>
     <tt>ignoreFrozenFileSystems = true</tt>
 
     This workaround is provided in the source file changes in 
@@ -90,7 +88,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **Component Manager / salt-minion: New InstallStatus "UNMANAGED".**
 
-    Salt-minion added support for "ExternalInstall" (106) to indicate an older version of salt-minion is installed on the vm and cannot be managed by the svtminion.* scripts.  The Component Manager will track that is "UNMANAGED" and take no action.
+    Salt-minion added support for "ExternalInstall" (106) to indicate an older version of salt-minion is installed on the vm and cannot be managed by the svtminion.* scripts.  The Component Manager will track that as "UNMANAGED" and take no action.
 
 *   **The following pull requests and issues have been addressed**
 
@@ -102,7 +100,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
       [Pull request #639](https://github.com/vmware/open-vm-tools/pull/639)
 
-    * Invalid argument with "\" in Linux username (Active Directory user)
+    * Invalid argument with "\\" in Linux username (Active Directory user)
 
       [Issue #641](https://github.com/vmware/open-vm-tools/issues/641)
 
