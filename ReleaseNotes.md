@@ -68,8 +68,11 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     It is possible that filesystems are being frozen in custom pre-freeze scripts to control the order in which those specific filesystems are to be frozen.  The vmtoolsd process **must be informed** of all such filesystems with the help of "excludedFileSystems" setting of tools.conf.
 
-    <tt>[vmbackup]<br/> <br/>
-    excludedFileSystems=/opt/data,/opt/app/project-*,...</tt>
+    ```
+    [vmbackup]
+
+    excludedFileSystems=/opt/data,/opt/app/project-*,...
+    ```
 
     A temporary workaround is available (starting from open-vm-tools 12.3.0) for system administrators to quickly allow a quiescing operation to succeed until the "excludedFileSystems" list can be configured.  Note, if another process thaws the file system while a quiescing snapshot operation is ongoing, the snapshot may be compromised.  Once the "excludedFileSystems" list is configured this setting MUST be unset (or set to false).
 
