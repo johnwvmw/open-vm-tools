@@ -110,7 +110,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     * Improve POSIX guest identification
 
-      [Issue #647](https://github.com/vmware/open-vm-tools/issues/647)
+      [Issue #647](https://github.com/vmware/open-vm-tools/issues/647)  
       [Issue #648](https://github.com/vmware/open-vm-tools/issues/648)
 
     * Remove appUtil library which depends on deprecated "gdk-pixbuf-xlib"
@@ -119,7 +119,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     * Fix build problems with grpc
 
-      [Pull request #664](https://github.com/vmware/open-vm-tools/pull/664)
+      [Pull request #664](https://github.com/vmware/open-vm-tools/pull/664)  
       [Issue #676](https://github.com/vmware/open-vm-tools/issues/676)
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
