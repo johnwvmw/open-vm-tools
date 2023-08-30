@@ -32,7 +32,7 @@ This release resolves CVE-2023-20900. For more information on this vulnerability
 
 *   Deprecated: Using "xml-security-c" and "xerces-c" to build the VMware Guest Authentication Service (VGAuth)
 
-    Starting with open-vm-tools 12.4.0 onward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source projects to build open-m-tools, now is the time to plan for the change.  The open-vm-tools 12.3.x series will be the last version that can use "xml-security-c" and "xerces-c".
+    Starting with open-vm-tools 12.4.0, and going forward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source projects to build open-vm-tools, now is the time to plan for the change.  The open-vm-tools 12.3.x series will be the last version that can use "xml-security-c" and "xerces-c".
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
@@ -86,7 +86,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
         https://github.com/vmware/open-vm-tools/commit/60c3a80ddc2b400366ed05169e16a6bed6501da2
 
-    and at the Linux vendor's discretion, may be backported to earlier versions of open-vm-tools.
+    and at Linux vendors' discretion, may be backported to earlier versions of open-vm-tools.
 
 *   **A number of Coverity reported issues have been addressed.**
 
