@@ -100,7 +100,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
     * Add antrea and calico interface pattern to GUESTINFO_DEFAULT_IFACE_EXCLUDES
 
-      [Issue #638](https://github.com/vmware/open-vm-tools/issues/638)
+      [Issue #638](https://github.com/vmware/open-vm-tools/issues/638)  
       [Pull request #639](https://github.com/vmware/open-vm-tools/pull/639)
 
     * Invalid argument with "\\" in Linux username (Active Directory user)
