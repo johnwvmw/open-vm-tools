@@ -1,8 +1,8 @@
-#                      open-vm-tools 12.3.0 Release Notes
+#                      open-vm-tools 12.3.5 Release Notes
 
-Updated on: 31 August 2023
+Updated on: 26 October 2023
 
-open-vm-tools | 31 AUGUST 2023 | Build 22234872
+open-vm-tools | 26 OCTOBER 2023 | Build 22544099
 
 Check back for additions and updates to these release notes.
 
@@ -20,13 +20,15 @@ The release notes cover the following topics:
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
-This release resolves CVE-2023-20900. For more information on this vulnerability and its impact on VMware products, see https://www.vmware.com/security/advisories/VMSA-2023-0019.html.
+*   This release resolves CVE-2023-34058. For more information on this vulnerability and its impact on VMware products, see https://www.vmware.com/security/advisories/VMSA-2023-0024.html.
+
+*   This release resolves CVE-2023-34059 which only affects open-vm-tools.
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
-*   A complete list of the granular changes in the open-vm-tools 12.3.0 release is available at:
+*   A complete list of the granular changes in the open-vm-tools 12.3.5 release is available at:
 
-    [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.3.0/open-vm-tools/ChangeLog)
+    [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.3.5/open-vm-tools/ChangeLog)
 
 ## <a id="endsupport" name="endsupport"></a>End of Feature Support Notice
 
@@ -36,7 +38,7 @@ This release resolves CVE-2023-20900. For more information on this vulnerability
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
-open-vm-tools 12.3.0 is available in the following languages:
+open-vm-tools 12.3.5` is available in the following languages:
 
 * English
 * French
@@ -58,66 +60,32 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 ## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
 
-*   **This release resolves CVE-2023-20900.**
+*   **This release resolves CVE-2023-34058.**
 
-    For more information on this vulnerability and its impact on VMware products, see https://www.vmware.com/security/advisories/VMSA-2023-0019.html.
+    For more information on this vulnerability and its impact on VMware products, see https://www.vmware.com/security/advisories/VMSA-2023-0024.html.
 
-*   **Linux quiesced snapshot: "SyncDriver: failed to freeze '_filesystem_'"**
+    open-vm-tools contains a SAML token signature bypass vulnerability. VMware has evaluated the severity of this issue to be in the Important severity range with a maximum CVSSv3 base score of 7.5 - CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
 
-    The open-vm-tools 12.2.0 release had an update to the Linux quiesced snapshot operation that would avoid starting a quiesced snapshot if a filesystem had already been frozen by another process.  See the [Resolved Issues](https://github.com/vmware/open-vm-tools/blob/stable-12.2.0/ReleaseNotes.md#-resolved-issues) section in the open-vm-tools 12.2.0 Release Notes.   That fix may have been backported into earlier versions of open-vm-tools by Linux vendors.  
+    A malicious actor that has been granted Guest Operation Privileges in a target virtual machine may be able to elevate their privileges if that target virtual machine has been assigned a more privileged Guest Alias.
 
-    It is possible that filesystems are being frozen in custom pre-freeze scripts to control the order in which those specific filesystems are to be frozen.  The vmtoolsd process **must be informed** of all such filesystems with the help of "excludedFileSystems" setting of tools.conf.
+    Note: While the description and known attack vectors are very similar to CVE-2023-20900, CVE-2023-34058 has a different root cause that must be addressed.
 
-    ```
-    [vmbackup]
+    A patch for earlier versions of open-vm-tools is available at [CVE-2023-34058.patch](https://github.com/vmware/open-vm-tools/blob/CVE-2023-34058.patch).
 
-    excludedFileSystems=/opt/data,/opt/app/project-*,...
-    ```
+*   **This release resolves CVE-2023-34059.**
+ 
+    open-vm-tools contains a file descriptor hijack vulnerability in the vmware-user-suid-wrapper. VMware has evaluated the severity of this issue to be in the Important severity range with a maximum CVSSv3 base score of 7.4. - CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
 
-    A temporary workaround is available (starting from open-vm-tools 12.3.0) for system administrators to quickly allow a quiescing operation to succeed until the "excludedFileSystems" list can be configured.  Note, if another process thaws the file system while a quiescing snapshot operation is ongoing, the snapshot may be compromised.  Once the "excludedFileSystems" list is configured this setting MUST be unset (or set to false).
+    A malicious actor with non-root privileges may be able to hijack the /dev/uinput file descriptor allowing them to simulate user inputs.
 
-    ```
-    [vmbackup]
+    A patch for earlier versions of open-vm-tools is available at [CVE-2023-34059.patch](https://github.com/vmware/open-vm-tools/blob/CVE-2023-34059.patch).
 
-    ignoreFrozenFileSystems = true
-    ```
+*   **The following github.com/vmware/open-vm-tools issue have been addressed**
 
-    This workaround is provided in the source file changes in 
+    * Better cooperation between deployPkg plugin and cloud-init concerning location of 'disable_vmware_customization' flag.
 
-        https://github.com/vmware/open-vm-tools/commit/60c3a80ddc2b400366ed05169e16a6bed6501da2
+      [Issue #310](https://github.com/vmware/open-vm-tools/issues/310)  
 
-    and at Linux vendors' discretion, may be backported to earlier versions of open-vm-tools.
-
-*   **A number of Coverity reported issues have been addressed.**
-
-*   **Component Manager / salt-minion: New InstallStatus "UNMANAGED".**
-
-    Salt-minion added support for "ExternalInstall" (106) to indicate an older version of salt-minion is installed on the vm and cannot be managed by the svtminion.* scripts.  The Component Manager will track that as "UNMANAGED" and take no action.
-
-*   **The following pull requests and issues have been addressed**
-
-    * Add antrea and calico interface pattern to GUESTINFO_DEFAULT_IFACE_EXCLUDES
-
-      [Issue #638](https://github.com/vmware/open-vm-tools/issues/638)  
-      [Pull request #639](https://github.com/vmware/open-vm-tools/pull/639)
-
-    * Invalid argument with "\\" in Linux username (Active Directory user)
-
-      [Issue #641](https://github.com/vmware/open-vm-tools/issues/641)
-
-    * Improve POSIX guest identification
-
-      [Issue #647](https://github.com/vmware/open-vm-tools/issues/647)  
-      [Issue #648](https://github.com/vmware/open-vm-tools/issues/648)
-
-    * Remove appUtil library which depends on deprecated "gdk-pixbuf-xlib"
-
-      [Issue #658](https://github.com/vmware/open-vm-tools/issues/658)
-
-    * Fix build problems with grpc
-
-      [Pull request #664](https://github.com/vmware/open-vm-tools/pull/664)  
-      [Issue #676](https://github.com/vmware/open-vm-tools/issues/676)
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
