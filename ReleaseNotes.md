@@ -38,7 +38,7 @@ The release notes cover the following topics:
 
 ## <a id="i18n" name="i18n"></a>Internationalization
 
-open-vm-tools 12.3.5` is available in the following languages:
+open-vm-tools 12.3.5 is available in the following languages:
 
 * English
 * French
