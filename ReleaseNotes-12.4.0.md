@@ -59,6 +59,16 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **The following github.com/vmware/open-vm-tools pull request has been addressed**
 
+    * A number of issues flagged by Coverity have been addressed.
+
+    * The Asianux distro rebranded itself as Miracle Linux.
+
+      The VMware infrastructure already knows about Asianux.  The necessary
+      aliasing code has been added to the "in guest" code.
+
+    * A file descriptor vulnerability in the open-vm-tools vmware-user-suid-wrapper
+      on Linux
+
     * Power Ops: Attempt to execute file path only
 
       [Pull request #689](https://github.com/vmware/open-vm-tools/pull/689)
