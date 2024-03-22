@@ -65,9 +65,9 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **A number of issues flagged by Coverity have been addressed.**
 
-*   **Add aliasing code to identify Miracle Linux by its former name of "Asianux".**
+*   **Add aliasing code to identify Miracle Linux by its former name of "asianux".**
 
-      The Asianux Linux distribution rebranded itself as "Miracle Linux."  Since vSphere infrastructure recognizes "asianux" but not "Miracle Linux," aliasing code was added to open-vmware-tools to continue to identify Miracle Linux systems as "asianux".
+      The Asianux Linux distribution rebranded itself as Miracle Linux.  Since vSphere infrastructure recognizes "asianux" but not Miracle Linux, aliasing code was added to open-vm-tools to continue to identify Miracle Linux systems as "asianux".
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
