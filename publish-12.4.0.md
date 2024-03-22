@@ -1,4 +1,4 @@
-**open-vm-tools 12.4.0 release based on build 22544099**
+**open-vm-tools 12.4.0 release based on build 23259341
 
 Please refer to the Release Notes at https://github.com/vmware/open-vm-tools/blob/stable-12.4.0/ReleaseNotes.md
 
