@@ -2,7 +2,7 @@
 
 Updated on: 27 June 2024
 
-open-vm-tools | 27 MARCH 2024 | Build 23787635
+open-vm-tools | 27 JUNE 2024 | Build 23787635
 
 Check back for additions and updates to these release notes.
 
@@ -57,15 +57,28 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 ## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
 
-*   **The following github.com/vmware/open-vm-tools pull request has been addressed**
+*   **A number of issues flagged by Coverity and ShellCheck have been addressed.**
 
-    * Power Ops: Attempt to execute file path only
+      The changes include code fixes and Coverity escapes for reported false positives.
 
-      [Pull request #689](https://github.com/vmware/open-vm-tools/pull/689)
+*   **Permission on the vmware-network.log file incorrecly defaults to (0644).**
 
-*   **A number of issues flagged by Coverity have been addressed.**
+    Fixed in this release;   The correct default is set to (0600).
 
-      The changes include code fixes and Coverity notation for reported false positives.
+*   **The NetworkManager calls in the Linux "network" have been updated.**
+
+    Defaults to using the "Sleep" method over the "Enabled" method used to
+    work around a 0.9.0 bug.
+
+    Resolves :
+      [Pull request #626](https://github.com/vmware/open-vm-tools/pull/699)
+      [Issue #426](https://github.com/vmware/open-vm-tools/issues/426)
+
+*   **Unused header files have been dropped from the current open-have been dropped from the **
+
+*   **Accomodate newer releases of libxml2 and xmlsec1.**
+
+    The configure.ac and VGAuth code updated to avoid deprecated functions and build options based on OSS product version.
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
