@@ -59,7 +59,14 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **A number of issues flagged by Coverity and ShellCheck have been addressed.**
 
-      The changes include code fixes and Coverity escapes for reported false positives.
+    The changes include code fixes and Coverity escapes for reported false positives.
+    See the details in the [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.4.5/open-vm-tools/ChangeLog)  for specific fix or false positive escape.
+
+*   **Nested logging from RPCChanneli error may hang the vmtoolsd process.**
+
+    Mutexes in lib/libvmtools/vmtoolsLog.c and glib could have been locked at fork time.  The vmtoolsLog.c Debug(), Warning() and Panic()functions are not safe for child processes.
+
+    This issue has been fixed in this release.
 
 *   **Permission on the vmware-network.log file incorrecly defaults to (0644).**
 
