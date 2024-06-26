@@ -45,7 +45,7 @@ open-vm-tools 12.4.5 is available in the following languages:
 ## <a id="suppnote" name="suppnote"></a>Product Support Notice
 
 Beginning with the next major release, we will be reducing the number of supported localization languages.  The three supported languages will be:
-  * Japaneses
+  * Japanese
   * Spanish
   * French
 
