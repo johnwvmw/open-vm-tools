@@ -11,8 +11,9 @@ Check back for additions and updates to these release notes.
 The release notes cover the following topics:
 
 * [What's New](#whatsnew) 
-* [End of Feature Support Notice](#endsupport)
 * [Internationalization](#i18n) 
+* [Product Support Notice](#suppnote)
+* [End of Feature Support Notice](#endsupport)
 * [Guest Operating System Customization Support](#guestop) 
 * [Interoperability Matrix](#interop) 
 * [Resolved Issues](#resolvedissues) 
@@ -27,12 +28,6 @@ The release notes cover the following topics:
 
     [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.4.5/open-vm-tools/ChangeLog)
 
-## <a id="endsupport" name="endsupport"></a>End of Feature Support Notice
-
-*   Discontinued: Using "xml-security-c" and "xerces-c" to build the VMware Guest Authentication Service (VGAuth)
-
-    Starting with open-vm-tools 12.4.0, and going forward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source projects to build open-vm-tools, you must make the change now.  The open-vm-tools 12.3.x series will be the last version that can use "xml-security-c" and "xerces-c".
-
 ## <a id="i18n" name="i18n"></a>Internationalization
 
 open-vm-tools 12.4.5 is available in the following languages:
@@ -46,6 +41,32 @@ open-vm-tools 12.4.5 is available in the following languages:
 * Korean
 * Simplified Chinese
 * Traditional Chinese
+
+## <a id="suppnote" name="suppnote"></a>Product Support Notice
+
+Beginning with the next major release, we will be reducing the number of supported localization languages.  The three supported languages will be:
+  * Japaneses
+  * Spanish
+  * French
+
+The following languages will no longer be supported:
+  * Italian
+  * German
+  * Brazilian Portuguese
+  * Traditional Chinese
+  * Korean
+  * Simplified Chinese
+
+Impact:
+  * Users who have been using the deprecated languages will no longer receive updates or support in these languages.
+  * All user interfaces, message catalogs, help documentation, and customer support will be available only in English or in the three supported languages mentioned above.
+
+## <a id="endsupport" name="endsupport"></a>End of Feature Support Notice
+
+*   ****
+*   **Discontinued: Using "xml-security-c" and "xerces-c" to build the VMware Guest Authentication Service (VGAuth)**
+
+    Starting with open-vm-tools 12.4.0, and going forward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source projects to build open-vm-tools, you must make the change now.  The open-vm-tools 12.3.x series will be the last version that can use "xml-security-c" and "xerces-c".
 
 ## <a id="guestop" name="guestop"></a>Guest Operating System Customization Support
 
@@ -62,13 +83,13 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
     The changes include code fixes and Coverity escapes for reported false positives.
     See the details in the [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-12.4.5/open-vm-tools/ChangeLog)  for specific fix or false positive escape.
 
-*   **Nested logging from RPCChanneli error may hang the vmtoolsd process.**
+*   **Nested logging from RPCChannel error may hang the vmtoolsd process.**
 
     Mutexes in lib/libvmtools/vmtoolsLog.c and glib could have been locked at fork time.  The vmtoolsLog.c Debug(), Warning() and Panic()functions are not safe for child processes.
 
     This issue has been fixed in this release.
 
-*   **Permission on the vmware-network.log file incorrecly defaults to (0644).**
+*   **Permission on the vmware-network.log file incorrectly defaults to (0644).**
 
     Fixed in this release;   The correct default is set to (0600).
 
