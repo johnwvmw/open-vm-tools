@@ -68,13 +68,13 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 *   **The NetworkManager calls in the Linux "network" have been updated.**
 
     Defaults to using the "Sleep" method over the "Enabled" method used to
-    work around a 0.9.0 bug.
+    work around a bug in NetworkManager version 0.9.0.
 
-    Resolves :
-      [Pull request #626](https://github.com/vmware/open-vm-tools/pull/699)
-      [Issue #426](https://github.com/vmware/open-vm-tools/issues/426)
+    Resolves:
+     * [Pull request #626](https://github.com/vmware/open-vm-tools/pull/699)
+     * [Issue #426](https://github.com/vmware/open-vm-tools/issues/426)
 
-*   **Unused header files have been dropped from the current open-have been dropped from the **
+*   **Unused header files have been dropped from the current open-vm-tools source.**
 
 *   **Accomodate newer releases of libxml2 and xmlsec1.**
 
