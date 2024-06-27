@@ -88,7 +88,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **vmtoolsd child processes invoke parent's atexit handler.****
 
-    Fixed by terminating child processes with _exit().
+    Fixed in this release by terminating child processes with _exit().
 
 *   **Mutexes in lib/libvmtools/vmtoolsLog.c and glib could have been locked at fork time.  The vmtoolsLog.c Debug(), Warning() and Panic() functions are not safe for child processes.**
 
