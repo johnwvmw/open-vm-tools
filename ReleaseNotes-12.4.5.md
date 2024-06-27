@@ -63,7 +63,6 @@ Impact:
 
 ## <a id="endsupport" name="endsupport"></a>End of Feature Support Notice
 
-*   ****
 *   **Discontinued: Using "xml-security-c" and "xerces-c" to build the VMware Guest Authentication Service (VGAuth)**
 
     Starting with open-vm-tools 12.4.0, and going forward, the VGAuth service build will require the "xmlsec1" and "libxml2" development and runtime packages.  If still using the "xml-security-c" and "xerces-c" open source projects to build open-vm-tools, you must make the change now.  The open-vm-tools 12.3.x series will be the last version that can use "xml-security-c" and "xerces-c".
@@ -85,13 +84,19 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **Nested logging from RPCChannel error may hang the vmtoolsd process.**
 
-    Mutexes in lib/libvmtools/vmtoolsLog.c and glib could have been locked at fork time.  The vmtoolsLog.c Debug(), Warning() and Panic()functions are not safe for child processes.
-
     This issue has been fixed in this release.
+
+*   **vmtoolsd child processes invoke parent's atexit handler.****
+
+    Fixed by terminating child processes with _exit().
+
+*   **Mutexes in lib/libvmtools/vmtoolsLog.c and glib could have been locked at fork time.  The vmtoolsLog.c Debug(), Warning() and Panic() functions are not safe for child processes.**
+
+    Fixed in this release by directing child processes' logging to stdout..
 
 *   **Permission on the vmware-network.log file incorrectly defaults to (0644).**
 
-    Fixed in this release;   The correct default is set to (0600).
+    Fixed in this release.  The correct default is set to (0600).
 
 *   **The NetworkManager calls in the Linux "network" have been updated.**
 
@@ -99,7 +104,7 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
     work around a bug in NetworkManager version 0.9.0.
 
     Resolves:
-     * [Pull request #626](https://github.com/vmware/open-vm-tools/pull/699)
+     * [Pull request #699](https://github.com/vmware/open-vm-tools/pull/699)
      * [Issue #426](https://github.com/vmware/open-vm-tools/issues/426)
 
 *   **Unused header files have been dropped from the current open-vm-tools source.**
