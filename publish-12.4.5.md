@@ -12,5 +12,5 @@ There are no new features in the open-vm-tools 12.4.5 release.  This is primaril
 
   - A vmtoolsd process hang related to nested logging from an RPC Channel error has been fixed.
 
-- For issues resolved in this release, see the [Resolved Issues ](https://github.com/vmware/open-vm-tools/blob/stable-12.4.5/ReleaseNotes.md#resolved-issues) section of the Release Notes.
+- For  a more complete list of issues resolved in this release, see the [Resolved Issues ](https://github.com/vmware/open-vm-tools/blob/stable-12.4.5/ReleaseNotes.md#resolved-issues) section of the Release Notes.
 
