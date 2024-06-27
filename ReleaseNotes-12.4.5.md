@@ -92,13 +92,13 @@ The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_
 
 *   **Mutexes in lib/libvmtools/vmtoolsLog.c and glib could have been locked at fork time.  The vmtoolsLog.c Debug(), Warning() and Panic() functions are not safe for child processes.**
 
-    Fixed in this release by directing child processes' logging to stdout..
+    Fixed in this release by directing child processes' logging to stdout.
 
 *   **Permission on the vmware-network.log file incorrectly defaults to (0644).**
 
     Fixed in this release.  The correct default is set to (0600).
 
-*   **The NetworkManager calls in the Linux "network" have been updated.**
+*   **The NetworkManager calls in the Linux "network" script have been updated.**
 
     Defaults to using the "Sleep" method over the "Enabled" method used to
     work around a bug in NetworkManager version 0.9.0.
