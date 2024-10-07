@@ -1,8 +1,8 @@
-#                      open-vm-tools 12.4.5 Release Notes
+#                      open-vm-tools 12.5.0 Release Notes
 
 Updated on: 8 October 2024
 
-open-vm-tools | 8 OCTOBER 2024 | Build 4276846
+open-vm-tools | 8 OCTOBER 2024 | Build 24276846
 
 Check back for additions and updates to these release notes.
 
