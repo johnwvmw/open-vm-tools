@@ -1,4 +1,4 @@
-**open-vm-tools 12.5.0 release based on build 4276846**
+**open-vm-tools 12.5.0 release based on build 24276846**
 
 Please refer to the Release Notes at https://github.com/vmware/open-vm-tools/blob/stable-12.5.0/ReleaseNotes.md
 
