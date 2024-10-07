@@ -13,7 +13,6 @@ The release notes cover the following topics:
 * [What's New](#whatsnew) 
 * [Internationalization](#i18n) 
 * [Product Support Notice](#suppnote)
-* [End of Feature Support Notice](#endsupport)
 * [Guest Operating System Customization Support](#guestop) 
 * [Interoperability Matrix](#interop) 
 * [Resolved Issues](#resolvedissues) 
@@ -61,7 +60,10 @@ Impact:
   * Users who have been using the deprecated languages will no longer receive updates or support in these languages.
   * All user interfaces, message catalogs, help documentation, and customer support will be available only in English or in the three supported languages mentioned above.
 
-## <a id="endsupport" name="endsupport"></a>End of Feature Support Notice
+## <a id="guestop" name="guestop"></a>Guest Operating System Customization Support
+
+The [Guest OS Customization Support Matrix](http://partnerweb.vmware.com/programs/guestOS/guest-os-customization-matrix.pdf) provides details about the guest operating systems supported for customization.
+
 
 ## <a id="interop" name="interop"></a>Interoperability Matrix
 
