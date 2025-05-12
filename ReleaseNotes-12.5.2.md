@@ -69,7 +69,7 @@ The [Guest OS Customization Support Matrix](http://partnerweb.vmware.com/program
 
 ## <a id="interop" name="interop"></a>Interoperability Matrix
 
-The [VMware Product Interoperability Matrix](http://partnerweb.vmware.com/comp_guide2/sim/interop_matrix.php) provides details about the compatibility of current and earlier versions of VMware Products. 
+The [VMware Product Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) provides details about the compatibility of current and earlier versions of VMware Products. 
 
 ## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
 
