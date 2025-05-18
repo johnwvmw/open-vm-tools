@@ -1,5 +1,4 @@
-#    [GOSC] Update Guest OS Customization to utilize systemd
- system init
+#    [GOSC] Update Guest OS Customization to utilize systemd system init
 
 Currently the "telinit 6" command is used to reboot a Linux VM
 following Guest OS Customization.  As the classic Linux init system,
