@@ -65,6 +65,7 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
     **On Linux**
 
     The "vmware-svtminion.sh-install-*.log" file for the failed install shows a trace similar to:
+
     `
     <date+time> INFO: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download attempting download of file 'repo.json' <date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '0' attempt, retcode '6' 
 <date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '1' attempt, retcode '6' 
@@ -81,7 +82,7 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
 
 *   **Provide tools.conf settings to deactivate one-time and periodic time synchronization**
 
-    The new tools.conf settings `**disable-all**` and `**disable-periodic**` allow the guest OS administrator to deactivate one-time and periodic time synchronization without rebooting the VM or restarting the guest OS.
+    The new tools.conf settings `disable-all` and `disable-periodic` allow the guest OS administrator to deactivate one-time and periodic time synchronization without rebooting the VM or restarting the guest OS.
 
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
