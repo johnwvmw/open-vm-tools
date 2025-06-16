@@ -1,0 +1,115 @@
+#                      open-vm-tools 13.0.0 Release Notes
+
+Updated on: 17 Hune 2025
+
+open-vm-tools | 17 JUNE 2025 | Build 24696409
+
+Check back for additions and updates to these release notes.
+
+## What's in the Release Notes
+
+The release notes cover the following topics:
+
+* [What's New](#whatsnew) 
+* [Internationalization](#i18n) 
+* [Product Support Notice](#suppnote)
+* [Guest Operating System Customization Support](#guestop) 
+* [Interoperability Matrix](#interop) 
+* [Resolved Issues](#resolvedissues) 
+* [Known Issues](#knownissues)
+
+## <a id="whatsnew" name="whatsnew"></a>What's New
+
+
+*   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
+
+*   A complete list of the granular changes in the open-vm-tools 13.0.0 release is available at:
+
+    [open-vm-tools ChangeLog](https://github.com/vmware/open-vm-tools/blob/stable-13.0.0/open-vm-tools/ChangeLog)
+
+## <a id="i18n" name="i18n"></a>Internationalization
+
+open-vm-tools 13.0.0 is available in the following languages:
+
+* English
+* French
+* Spanish
+* Japanese
+
+## <a id="suppnote" name="suppnote"></a>Product Support Notice
+
+Beginning with the next major release, we will be reducing the number of supported localization languages.  The three supported languages will be:
+  * Japanese
+  * Spanish
+  * French
+
+The following languages will no longer be supported:
+  * Italian
+  * German
+  * Brazilian Portuguese
+  * Traditional Chinese
+  * Korean
+  * Simplified Chinese
+
+Impact:
+  * Users who have been using the deprecated languages will no longer receive updates or support in these languages.
+  * All user interfaces, message catalogs, help documentation, and customer support will be available only in English or in the three supported languages mentioned above.
+
+## <a id="guestop" name="guestop"></a>Guest Operating System Customization Support
+
+The [Guest OS Customization Support Matrix](http://partnerweb.vmware.com/programs/guestOS/guest-os-customization-matrix.pdf) provides details about the guest operating systems supported for customization.
+
+
+## <a id="interop" name="interop"></a>Interoperability Matrix
+
+The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.com/Interoperability) provides details about the compatibility of current and earlier versions of VMware Products. 
+
+## <a id="resolvedissues" name ="resolvedissues"></a> Resolved Issues
+
+*   **The following github.com/vmware/open-vm-tools pull request has been addressed.**
+
+    * Revise settings for vmware-user.desktop
+
+      [Pull request #668](https://github.com/vmware/open-vm-tools/pull/668)
+
+*   **After October 25, 2024, with VMware Tools or open-vm-tools earlier than 13.0.0, the salt-minion component is not installed or fails to install in a guest operating system through the VMware Component Manager**
+
+    When you configure the salt-minion component in the present state, its last status is set to 102 (not installed) or 103 (installation failed), never reaching the installed state 100.
+
+    * The VM advanced setting with the key "guestinfo./vmware.components.salt_minion.desiredstate" has a value present.
+    * The VM advanced setting with the key "guestinfo.vmware.components.salt_minion.laststatus" has a value 102 or 103.
+
+    The salt-minion component installs a log file as traces indicating failure to access the online salt repository on https://repo.saltproject.io.
+
+    **On Linux**
+
+    The "vmware-svtminion.sh-install-*.log" file for the failed install shows a trace similar to:
+    `
+    <date+time> INFO: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download attempting download of file 'repo.json' <date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '0' attempt, retcode '6' 
+<date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '1' attempt, retcode '6' 
+<date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '2' attempt, retcode '6' 
+<date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '3' attempt, retcode '6' 
+<date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '4' attempt, retcode '6' 
+<date+time> ERROR: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' after '5' attempts
+    `
+
+*   **Provide tools.conf settings to deactivate one-time and periodic time synchronization**
+
+    The new tools.conf settings disable-all and disable-periodic allow the guest OS administrator to deactivate one-time and periodic time synchronization without rebooting the VM or restarting the guest OS.
+
+
+## <a id="knownissues" name="knownissues"></a>Known Issues
+
+*   **Shared Folders mount is unavailable on Linux VM.**
+
+    If the **Shared Folders** feature is enabled on a Linux VM while it is powered off, the shared folders mount is not available on restart.
+
+    Note: This issue is applicable to open-vm-tools running on VMware Workstation and VMware Fusion.
+
+    Workaround:
+
+    If the VM is powered on, disable and enable the **Shared Folders** feature from the interface. For resolving the issue permanently, edit **/etc/fstab** and add an entry to mount the Shared Folders automatically on boot.  For example, add the line:
+
+    <tt>vmhgfs-fuse   /mnt/hgfs    fuse    defaults,allow_other    0    0</tt>
+
+    For more information on how to configure VMware Tools Shared Folders, see [KB 60262](https://kb.vmware.com/s/article/60262)
