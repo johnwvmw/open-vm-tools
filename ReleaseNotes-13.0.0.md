@@ -1,6 +1,6 @@
 #                      open-vm-tools 13.0.0 Release Notes
 
-Updated on: 17 Hune 2025
+Updated on: 17 June 2025
 
 open-vm-tools | 17 JUNE 2025 | Build 24696409
 
@@ -36,25 +36,6 @@ open-vm-tools 13.0.0 is available in the following languages:
 * Spanish
 * Japanese
 
-## <a id="suppnote" name="suppnote"></a>Product Support Notice
-
-Beginning with the next major release, we will be reducing the number of supported localization languages.  The three supported languages will be:
-  * Japanese
-  * Spanish
-  * French
-
-The following languages will no longer be supported:
-  * Italian
-  * German
-  * Brazilian Portuguese
-  * Traditional Chinese
-  * Korean
-  * Simplified Chinese
-
-Impact:
-  * Users who have been using the deprecated languages will no longer receive updates or support in these languages.
-  * All user interfaces, message catalogs, help documentation, and customer support will be available only in English or in the three supported languages mentioned above.
-
 ## <a id="guestop" name="guestop"></a>Guest Operating System Customization Support
 
 The [Guest OS Customization Support Matrix](http://partnerweb.vmware.com/programs/guestOS/guest-os-customization-matrix.pdf) provides details about the guest operating systems supported for customization.
@@ -72,14 +53,14 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
 
       [Pull request #668](https://github.com/vmware/open-vm-tools/pull/668)
 
-*   **After October 25, 2024, with VMware Tools or open-vm-tools earlier than 13.0.0, the salt-minion component is not installed or fails to install in a guest operating system through the VMware Component Manager**
+*   **After October 25, 2024, with open-vm-tools earlier than 13.0.0, the salt-minion component is not installed or fails to install in a guest operating system through the VMware Component Manager**
 
     When you configure the salt-minion component in the present state, its last status is set to 102 (not installed) or 103 (installation failed), never reaching the installed state 100.
 
     * The VM advanced setting with the key "guestinfo./vmware.components.salt_minion.desiredstate" has a value present.
     * The VM advanced setting with the key "guestinfo.vmware.components.salt_minion.laststatus" has a value 102 or 103.
 
-    The salt-minion component installs a log file as traces indicating failure to access the online salt repository on https://repo.saltproject.io.
+    The salt-minion component installs a log file with traces indicating failure to access the online salt repository on https://repo.saltproject.io.
 
     **On Linux**
 
@@ -92,6 +73,11 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
 <date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '4' attempt, retcode '6' 
 <date+time> ERROR: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' after '5' attempts
     `
+    This issue is resolved in this release.
+
+    The new versions of the salt-minion integration scripts supporting the new Salt Project repository locations are available at:
+
+    * [https://packages.broadcom.com/artifactory/saltproject-generic/onedir/](https://packages.broadcom.com/artifactory/saltproject-generic/onedir/)
 
 *   **Provide tools.conf settings to deactivate one-time and periodic time synchronization**
 
