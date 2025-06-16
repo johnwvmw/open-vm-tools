@@ -49,9 +49,20 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
 
 *   **The following github.com/vmware/open-vm-tools pull request has been addressed.**
 
-    * Revise settings for vmware-user.desktop
+    * FTBFS: --std=c23 conflicting types between function definition and declaration MXUserTryAcquireForceFail()
 
-      [Pull request #668](https://github.com/vmware/open-vm-tools/pull/668)
+      [Fixes Issue #750](https://github.com/vmware/open-vm-tools/issues/750)
+      [Pull request #751](https://github.com/vmware/open-vm-tools/pull/751)
+
+    * Provide tools.conf settings to deactivate one-time and periodic time synchronization
+
+      The new tools.conf settings `disable-all` and `disable-periodic` allow the guest OS administrator to deactivate one-time and periodic time synchronization without rebooting the VM or restarting the guest OS.
+
+      [Fixes Issue #302](https://github.com/vmware/open-vm-tools/issues/302)
+
+    * Fix xmlsec detection when cross-compiling with pkg-config
+
+      [Pull request #732](https://github.com/vmware/open-vm-tools/pull/732)
 
 *   **After October 25, 2024, with open-vm-tools earlier than 13.0.0, the salt-minion component is not installed or fails to install in a guest operating system through the VMware Component Manager**
 
@@ -81,11 +92,6 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
     The new versions of the salt-minion integration scripts supporting the new Salt Project repository locations are available at:
 
     * [https://packages.broadcom.com/artifactory/saltproject-generic/onedir/](https://packages.broadcom.com/artifactory/saltproject-generic/onedir/)
-
-*   **Provide tools.conf settings to deactivate one-time and periodic time synchronization**
-
-    The new tools.conf settings `disable-all` and `disable-periodic` allow the guest OS administrator to deactivate one-time and periodic time synchronization without rebooting the VM or restarting the guest OS.
-
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
 
