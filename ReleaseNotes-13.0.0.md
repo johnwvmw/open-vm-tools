@@ -67,7 +67,6 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
     The "vmware-svtminion.sh-install-*.log" file for the failed install shows a trace similar to:
 
     ```
-    {
     <date+time> INFO: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download attempting download of file 'repo.json'
     <date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '0' attempt, retcode '6' 
     <date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '1' attempt, retcode '6' 
@@ -75,7 +74,6 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
     <date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '3' attempt, retcode '6' 
     <date+time> WARNING: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' on '4' attempt, retcode '6' 
     <date+time> ERROR: /usr/lib64/open-vm-tools/componentMgr/saltMinion/svtminion.sh:_curl_download failed to download file 'repo.json' from 'https://repo.saltproject.io/salt/py3/onedir/repo.json' after '5' attempts
-    }
     ```
 
     This issue is resolved in this release.
