@@ -51,7 +51,7 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
 
     * FTBFS: --std=c23 conflicting types between function definition and declaration MXUserTryAcquireForceFail()
 
-      [Fixes Issue #750](https://github.com/vmware/open-vm-tools/issues/750)
+      [Fixes Issue #750](https://github.com/vmware/open-vm-tools/issues/750)  
       [Pull request #751](https://github.com/vmware/open-vm-tools/pull/751)
 
     * Provide tools.conf settings to deactivate one-time and periodic time synchronization
