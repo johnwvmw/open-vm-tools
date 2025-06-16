@@ -81,7 +81,7 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
 
 *   **Provide tools.conf settings to deactivate one-time and periodic time synchronization**
 
-    The new tools.conf settings disable-all and disable-periodic allow the guest OS administrator to deactivate one-time and periodic time synchronization without rebooting the VM or restarting the guest OS.
+    The new tools.conf settings `**disable-all**` and `**disable-periodic**` allow the guest OS administrator to deactivate one-time and periodic time synchronization without rebooting the VM or restarting the guest OS.
 
 
 ## <a id="knownissues" name="knownissues"></a>Known Issues
