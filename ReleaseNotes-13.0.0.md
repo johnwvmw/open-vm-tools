@@ -20,6 +20,9 @@ The release notes cover the following topics:
 
 ## <a id="whatsnew" name="whatsnew"></a>What's New
 
+*   The vm-support script has been improved (version 0.97).
+
+    The vm-support script will now collect all current open-vm-tools log files as configured in the [logging] section of tools.conf.   
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
