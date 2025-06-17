@@ -24,7 +24,7 @@ The release notes cover the following topics:
 
     To aid in triaging open-vm-tools issues, the vm-support script has been updated to:
       * now collect all current open-vm-tools log files as configured in the [logging] section of tools.conf.
-      * collect one month of info from the systemd journal.
+      * collect one month of information from the systemd journal.
 
 *   Please see the [Resolved Issues](#resolvedissues) and [Known Issues](#knownissues) sections below.
 
@@ -108,4 +108,4 @@ The [Broadcom Product Interoperability Matrix](https://interopmatrix.broadcom.c
 
     <tt>vmhgfs-fuse   /mnt/hgfs    fuse    defaults,allow_other    0    0</tt>
 
-    For more information on how to configure VMware Tools Shared Folders, see [KB 60262](https://kb.vmware.com/s/article/60262)
+    For more information on how to configure VMware Tools Shared Folders, see [KB 60262](https://knowledge.broadcom.com/external/article?legacyId=60262)
