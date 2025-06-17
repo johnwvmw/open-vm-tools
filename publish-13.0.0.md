@@ -10,5 +10,5 @@ There are no new features in the open-vm-tools 13.0.0 release.  This is primaril
 
   - Github pull requests has been integrated and issues fixed.  Please see the Resolved Issues section of the Release Notes.
 
-- For  a more complete list of issues addressed in this release, see the[What's New](https://github.com/vmware/open-vm-tools/blob/stable-13.0.0/ReleaseNotes.md#whatsnew) and[Resolved Issues ](https://github.com/vmware/open-vm-tools/blob/stable-13.0.0/ReleaseNotes.md#resolved-issues) section of the Release Notes.
+- For  a more complete list of issues addressed in this release, see the [What's New](https://github.com/vmware/open-vm-tools/blob/stable-13.0.0/ReleaseNotes.md#whatsnew) and [Resolved Issues ](https://github.com/vmware/open-vm-tools/blob/stable-13.0.0/ReleaseNotes.md#resolved-issues) section of the Release Notes.
 
